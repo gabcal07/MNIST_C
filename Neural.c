@@ -272,12 +272,32 @@ void FreeTestData()
 
 	free(test_outputs);
 }
-// main {learn|test|learnTest|apply} [learning_rate] [attempts] [blackNwhite] 
-// main learn {learning_rate} {attempts} {blackNwhite}
-// main test {blackNwhite}
-// main learnTest {learning_rate} {attempts} {blackNwhite}
-// main apply {path} {blackNwhite}
-/*
+
+/**
+ * MNIST Neural Network Command-Line Interface
+ * 
+ * USAGE:
+ *   ./neural <command> [options]
+ * 
+ * COMMANDS:
+ *   learn      Train the neural network with specified parameters
+ *   test       Evaluate the network's performance on test data
+ *   learnTest  Train the network and then test its performance
+ *   apply      Recognize a digit in the specified image file
+ * 
+ * OPTIONS:
+ *   learning_rate  Learning rate (default: 0.3) - Controls step size during training
+ *   attempts       Number of training iterations (default: 2)
+ *   blackNwhite    Use black and white conversion [0|1] (default: 1)
+ *   path           Path to image file for digit recognition
+ * 
+ * EXAMPLES:
+ *   ./neural learn 0.1 5 1      # Train with learning rate 0.1, 5 iterations, B&W mode
+ *   ./neural test 1             # Test pre-trained network using B&W mode
+ *   ./neural learnTest 0.2 3 1  # Train and test with specified parameters
+ *   ./neural apply digit.png 1  # Recognize digit in the specified image
+ */
+
 int main(int argc, const char* argv[])
 {
 	if (argc < 2) 
@@ -371,5 +391,5 @@ int main(int argc, const char* argv[])
 	
 	return EXIT_SUCCESS;
 }
-*/
+
 
