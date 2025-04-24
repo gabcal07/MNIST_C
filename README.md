@@ -87,7 +87,3 @@ The network uses the sigmoid activation function and is trained using backpropag
 ## Performance
 
 On the MNIST test dataset, the network can achieve accuracy rates that vary based on training parameters. With optimal settings, it can reach significant accuracy while maintaining computational efficiency.
-
-## License
-
-[Specify license information here]
